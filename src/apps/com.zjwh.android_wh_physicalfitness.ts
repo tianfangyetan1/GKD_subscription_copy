@@ -106,7 +106,7 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 11,
+      key: 2,
       name: '分段广告-卡片广告',
       desc: '点击关闭-不感兴趣',
       fastQuery: true,
