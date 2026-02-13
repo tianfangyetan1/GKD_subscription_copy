@@ -128,8 +128,8 @@ export default defineGkdApp({
             '.ui.LauncherUI',
           ],
           matches: [
-            '[text^="登入 WeChat" || text="登录 Windows 微信" || text^="Log in to Weixin for"][visibleToUser=true]',
-            '[text="登入" || text="登录" || text="Log In"][visibleToUser=true]',
+            '[text="登录 Windows 微信" || text^="登入 WeChat" || text^="Log in to Weixin for"][visibleToUser=true]',
+            '[text="登录" || text="登入" || text="Log In"][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/13522625',
