@@ -53,6 +53,7 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
+          actionCd: 500,
           activityIds:
             'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
           matches:
