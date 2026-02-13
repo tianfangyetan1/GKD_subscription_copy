@@ -10,8 +10,8 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'icu.freedomIntrovert.biliSendCommAntifraud.ByXposedLaunchedActivity',
+          actionDelay: 200, //150ms刚好 +50ms冗余，因为过早触发动画没加载完
+          activityIds: '.ByXposedLaunchedActivity',
           matches: 'Button[text="后台等待"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/25240613',
         },
