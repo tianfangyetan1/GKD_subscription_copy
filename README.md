@@ -34,7 +34,7 @@
 https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIsouler_gkd.json5
 ``` -->
 
-- jsdelivr源 (国内可用但可能不稳定)
+- jsdelivr源 (国内可用但可能不稳定,更新滞后24h)
 
 ```txt
 https://cdn.jsdelivr.net/gh/Lin-arm/GKD_subscription@main/dist/gkd.json5
@@ -47,9 +47,9 @@ https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 ```
 
 <details>
-<summary>⭐ 点击展开查看更多源(实验性)</summary>
+<summary>☢️ 点击展开查看更多源(实验性)</summary>
 
-- bgithub源 (国内可用)
+- bgithub源 (国内可用,同步及时30min内,但可能随时挂掉！)
 
 ```txt
 https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
