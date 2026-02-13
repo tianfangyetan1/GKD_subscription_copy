@@ -53,8 +53,10 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
-          activityIds: 'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
-          matches: '[text="同意" || text="确认"][visibleToUser=true][clickable=true]',
+          activityIds:
+            'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
+          matches:
+            '[text="同意" || text="确认"][visibleToUser=true][clickable=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/24838083',
             'https://i.gkd.li/i/24838130',
