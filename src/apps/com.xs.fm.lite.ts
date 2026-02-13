@@ -66,12 +66,13 @@ export default defineGkdApp({
     {
       key: 3,
       name: '功能类-自动展开回复',
+      desc: '点击[展开XX条回复]',
       rules: [
         {
           fastQuery: true,
           activityIds: 'com.xs.fm.karaoke.impl.cover.KaraokeCoverActivity',
           matches:
-            '@ViewGroup[clickable=true] > TextView[text^="展开"][text$="回复"][text!*="展开更多回复"][visibleToUser=true]',
+            '@ViewGroup[clickable=true] > TextView[text^="展开"][text$="条回复"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/25246736',
             'https://i.gkd.li/i/25282147',
