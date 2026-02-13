@@ -47,26 +47,18 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '功能类-自动授权登录',
+      name: '功能类-权限申请自动授权',
+      desc: 'App申请权限自动同意',
       rules: [
         {
-          key: 1,
+          key: 0,
           fastQuery: true,
-          snapshotUrls: ['https://i.gkd.li/i/24838083'],
-          activityIds: [
-            'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
+          activityIds: 'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
+          matches: '[text="同意" || text="确认"][visibleToUser=true][clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/24838083',
+            'https://i.gkd.li/i/24838130',
           ],
-          matches: ['[text="同意"][visibleToUser=true]'],
-        },
-        {
-          preKeys: [1],
-          name: '点击确认',
-          fastQuery: true,
-          snapshotUrls: ['https://i.gkd.li/i/24838130'],
-          activityIds: [
-            'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
-          ],
-          matches: ['[text="确认"][visibleToUser=true]'],
         },
       ],
     },
