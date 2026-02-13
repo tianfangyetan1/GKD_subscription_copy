@@ -34,11 +34,28 @@
 https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIsouler_gkd.json5
 ``` -->
 
+- jsdelivr源 (国内可用但可能不稳定)
+
+```txt
+https://cdn.jsdelivr.net/gh/Lin-arm/GKD_subscription@main/dist/gkd.json5
+```
+
 - GitHub源
 
 ```txt
 https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 ```
+
+<details>
+<summary>⭐ 点击展开查看更多源(实验性)</summary>
+
+- bgithub源 (国内可用)
+
+```txt
+https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
+```
+
+</details>
 
 - 当前版本: v408
 
