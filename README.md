@@ -40,9 +40,9 @@ https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIso
 https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 ```
 
-- 当前版本: v407
+- 当前版本: v408
 
-- 当前订阅文件已适配 886 个应用，共有 2074 应用规则组，3 全局规则组
+- 当前订阅文件已适配 887 个应用，共有 2082 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -79,7 +79,7 @@ https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 ## 🥇感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AIsouler/GKD_subscription&_v=407)
+![img](https://contrib.rocks/image?repo=AIsouler/GKD_subscription&_v=408)
 
 ## 📈Star History
 
