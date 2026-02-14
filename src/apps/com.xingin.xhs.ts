@@ -118,7 +118,7 @@ export default defineGkdApp({
       name: '分段广告-信息流广告',
       desc: '长按"赞助"/"广告"标识的卡片-点"不感兴趣"',
       fastQuery: true,
-      activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
+      activityIds: '.index.v2.IndexActivityV2',
       rules: [
         {
           key: 0,
@@ -194,22 +194,25 @@ export default defineGkdApp({
     {
       key: 7,
       name: '局部广告-你可能感兴趣的人',
+      desc: '点击[关闭]',
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
-          matches: '[text="你可能感兴趣的人"] +2 Button[text="关闭"]',
+          activityIds: '.index.v2.IndexActivityV2',
+          matches:
+            '[text="你可能感兴趣的人"] +2 Button[text="关闭"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/25244655',
         },
       ],
     },
     {
       key: 8,
-      name: '局部广告-关闭首页信息流中推荐博主',
+      name: '局部广告-首页信息流中推荐博主',
+      desc: 'x掉 (关注xx的人也关注TA)',
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
+          activityIds: '.index.v2.IndexActivityV2',
           matches:
             '[vid="recommend_close"][clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/25245325',
@@ -218,14 +221,13 @@ export default defineGkdApp({
     },
     {
       key: 9,
-      name: '局部广告-直播间各种卡片',
-      activityIds: 'com.xingin.alpha.audience.v2.AlphaAudienceActivityV2',
+      name: '局部广告-直播间右下角卡片',
       rules: [
         {
-          key: 1,
           fastQuery: true,
+          activityIds: 'com.xingin.alpha.audience.v2.AlphaAudienceActivityV2',
           matches:
-            '@ViewGroup[clickable=true][visibleToUser=true] - ViewGroup <<n [vid="canvasLayout"]',
+            'ImageView < @[clickable=true] <n ViewGroup <<3 [vid="canvasLayout"]',
           snapshotUrls: 'https://i.gkd.li/i/25245250',
         },
       ],
