@@ -574,5 +574,98 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 23,
+      name: '功能类-视频自动⏩x1.25倍速⚠️三个只能选其中一',
+      desc: '依次点击 ①视频 ②更多 ③1.25倍速',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'match', // activityId 变化时重置
+      actionCd: 3000, //手机性能考虑等待界面加载稳定后再执行
+      activityIds: 'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+      rules: [
+        {
+          key: 0,
+          actionDelay: 1000,
+          matches: '[vid="video_area"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314184',
+        },
+        {
+          key: 1,
+          preKeys: [0],
+          matches:
+            '[vid="toolbar_action_overflow"][desc^="更多"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314223',
+        },
+        {
+          preKeys: [1],
+          matches:
+            '[text="倍速"] + * >2 @[clickable=true] > [vid="title"][text="1.25"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314490',
+        },
+      ],
+    },
+    {
+      key: 24,
+      name: '功能类-视频自动⏩x1.5倍速⚠️三个只能选其中一',
+      desc: '依次点击 ①视频 ②更多 ③1.5倍速',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'match', // activityId 变化时重置
+      actionCd: 3000, //手机性能考虑等待界面加载稳定后再执行
+      activityIds: 'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+      rules: [
+        {
+          key: 0,
+          actionDelay: 1000,
+          matches: '[vid="video_area"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314184',
+        },
+        {
+          key: 1,
+          preKeys: [0],
+          matches:
+            '[vid="toolbar_action_overflow"][desc^="更多"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314223',
+        },
+        {
+          preKeys: [1],
+          matches:
+            '[text="倍速"] + * >2 @[clickable=true] > [vid="title"][text="1.5"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314490',
+        },
+      ],
+    },
+    {
+      key: 25,
+      name: '功能类-视频自动⏩x2.0倍速⚠️三个只能选其中一',
+      desc: '依次点击 ①视频 ②更多 ③2.0倍速',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'match', // activityId 变化时重置
+      actionCd: 3000, //手机性能考虑等待界面加载稳定后再执行
+      activityIds: 'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+      rules: [
+        {
+          key: 0,
+          actionDelay: 1000,
+          matches: '[vid="video_area"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314184',
+        },
+        {
+          key: 1,
+          preKeys: [0],
+          matches:
+            '[vid="toolbar_action_overflow"][desc^="更多"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314223',
+        },
+        {
+          preKeys: [1],
+          matches:
+            '[text="倍速"] + * >2 @[clickable=true] > [vid="title"][text="2.0"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25314490',
+        },
+      ],
+    },
   ],
 });
