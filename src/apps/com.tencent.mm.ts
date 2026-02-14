@@ -526,7 +526,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.plugin.webwx.ui.WebWXUnlockUI',
           anyMatches: [
-            '[text="解锁" || text="解鎖"]clickable=true][visibleToUser=true]',
+            '[text="解锁" || text="解鎖"][clickable=true][visibleToUser=true]',
             '@[text="解锁" || text="解鎖"][clickable=true] < LinearLayout -2 [text^="解锁" || text="解鎖"][visibleToUser=true]',
           ],
           exampleUrls:
