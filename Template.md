@@ -34,11 +34,28 @@
 https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIsouler_gkd.json5
 ``` -->
 
+- jsdelivr源 (国内可用但可能不稳定,更新滞后24h)
+
+```txt
+https://cdn.jsdelivr.net/gh/Lin-arm/GKD_subscription@main/dist/gkd.json5
+```
+
 - GitHub源
 
 ```txt
 https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 ```
+
+<details>
+<summary>☢️ 点击展开查看更多源(实验性)</summary>
+
+- bgithub源 (国内可用,同步及时30min内,但可能随时挂掉！)
+
+```txt
+https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
+```
+
+</details><br>
 
 - 当前版本: v--VERSION--
 
@@ -50,15 +67,6 @@ https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 - 如何编写订阅/贡献此项目 -> [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-<!-- ## 赞助
-
-如果这个项目对您有帮助，欢迎赞助我，感谢您的支持！
-
-|                                           微信                                            |                                          支付宝                                           |
-| :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
-| ![Image](https://github.com/user-attachments/assets/16c5fdce-dec4-4e3b-a55f-ce08e94c6d02) | ![Image](https://github.com/user-attachments/assets/56bf69f4-aa06-423a-9964-e54ad3d59cf9) |
-
-爱发电：<https://ifdian.net/a/AIsouler> -->
 
 ## 🐳交流群
 
