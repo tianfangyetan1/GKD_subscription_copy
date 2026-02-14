@@ -34,15 +34,32 @@
 https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIsouler_gkd.json5
 ``` -->
 
+- jsdelivr源 (国内可用但可能不稳定,更新滞后24h)
+
+```txt
+https://cdn.jsdelivr.net/gh/Lin-arm/GKD_subscription@main/dist/gkd.json5
+```
+
 - GitHub源
 
 ```txt
 https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 ```
 
-- 当前版本: v407
+<details>
+<summary>☢️ 点击展开查看更多源(实验性)</summary>
 
-- 当前订阅文件已适配 886 个应用，共有 2074 应用规则组，3 全局规则组
+- bgithub源 (国内可用,同步及时30min内,但可能随时挂掉！)
+
+```txt
+https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
+```
+
+</details>
+
+- 当前版本: v408
+
+- 当前订阅文件已适配 887 个应用，共有 2082 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -79,7 +96,7 @@ https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 ## 🥇感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AIsouler/GKD_subscription&_v=407)
+![img](https://contrib.rocks/image?repo=AIsouler/GKD_subscription&_v=408)
 
 ## 📈Star History
 
