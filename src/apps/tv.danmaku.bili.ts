@@ -576,35 +576,31 @@ export default defineGkdApp({
     },
     {
       key: 23,
-      name: '功能类-视频自动倍速⏩x1.25⚠️三个只能选其中一个!',
-      desc: '进入视频-点一下-点击三个点-点击倍速x1.25',
+      name: '功能类-视频自动⏩x1.25倍速',
+      desc: '依次点击 ①视频 ②更多 ③1.25倍速',
       fastQuery: true,
       actionMaximum: 1,
+      resetMatch: 'match', // activityId 变化时重置
       actionCd: 3000, //手机性能考虑等待界面加载稳定后再执行
+      activityIds: 'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
       rules: [
         {
           key: 0,
           actionDelay: 1000,
-          activityIds:
-            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
           matches: '[vid="video_area"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/25314184',
         },
         {
           key: 1,
           preKeys: [0],
-          activityIds:
-            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
           matches:
-            '[vid="toolbar_action_overflow"][clickable=true][visibleToUser=true]',
+            '[vid="toolbar_action_overflow"][desc^="更多"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/25314223',
         },
         {
           preKeys: [1],
-          activityIds:
-            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
           matches:
-            '@[vid="title"][text="1.25"][visibleToUser=true] <<11 [vid="recycler_view"][visibleToUser=true][childCount=6]',
+            '[text="倍速"] + * >2 @[clickable=true] > [vid="title"][text="1.25"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/25314490',
         },
       ],
