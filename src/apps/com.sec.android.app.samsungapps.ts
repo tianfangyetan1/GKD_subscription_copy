@@ -54,5 +54,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '全屏广告-应用推荐广告',
+      desc: '点击[今天不要再显示]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.SamsungAppsMainActivity',
+          matches:
+            '@[clickable=true] > [vid="do_not_show_again_area_text"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/22320803',
+          exampleUrls: 'https://e.gkd.li/37b29a88-d564-4ef6-9ab3-ff88954c87fc',
+        },
+      ],
+    },
   ],
 });
