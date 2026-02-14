@@ -87,8 +87,8 @@ https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 ## 🥇感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=AIsouler/GKD_subscription&_v=--VERSION--)
+![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&_v=--VERSION--)
 
 ## 📈Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=AIsouler/GKD_subscription&type=Date)](https://star-history.com/#AIsouler/GKD_subscription&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Lin-arm/GKD_subscription&type=Date)](https://star-history.com/#Lin-arm/GKD_subscription&Date)
