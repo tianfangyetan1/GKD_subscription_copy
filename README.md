@@ -58,11 +58,11 @@ https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
 ```
 
-</details>
+</details><br>
 
-- 当前版本: v408
+- 当前版本: v409
 
-- 当前订阅文件已适配 887 个应用，共有 2082 应用规则组，3 全局规则组
+- 当前订阅文件已适配 887 个应用，共有 2087 应用规则组，3 全局规则组
 
 - 查看 [适配 APP 列表](./dist/README.md)
 
@@ -70,15 +70,6 @@ https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 - 如何编写订阅/贡献此项目 -> [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-<!-- ## 赞助
-
-如果这个项目对您有帮助，欢迎赞助我，感谢您的支持！
-
-|                                           微信                                            |                                          支付宝                                           |
-| :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
-| ![Image](https://github.com/user-attachments/assets/16c5fdce-dec4-4e3b-a55f-ce08e94c6d02) | ![Image](https://github.com/user-attachments/assets/56bf69f4-aa06-423a-9964-e54ad3d59cf9) |
-
-爱发电：<https://ifdian.net/a/AIsouler> -->
 
 ## 🐳交流群
 
@@ -99,7 +90,7 @@ https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 ## 🥇感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&_v=408)
+![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&_v=409)
 
 ## 📈Star History
 
