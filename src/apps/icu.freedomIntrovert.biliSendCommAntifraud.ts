@@ -10,10 +10,13 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          actionDelay: 200, //150ms刚好 +50ms冗余，因为过早触发动画没加载完
+          actionDelay: 400, //过早触发动画没加载完就动作导致操作无效
           activityIds: '.ByXposedLaunchedActivity',
           matches: 'Button[text="后台等待"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/25240613',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25240613',
+            'https://i.gkd.li/i/25320069',
+          ],
         },
       ],
     },
