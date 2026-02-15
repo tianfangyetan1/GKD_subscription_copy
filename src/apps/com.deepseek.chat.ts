@@ -10,6 +10,7 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.deepseek.chat.MainActivity',
+          actionCd: 3000,
           matches:
             '@[clickable=true] > [text="正在思考" || text^="已思考"] + View[desc="折叠"]',
           snapshotUrls: [
