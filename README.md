@@ -60,7 +60,7 @@ https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 </details><br>
 
-- 当前版本: v409
+- 当前版本: v410
 
 - 当前订阅文件已适配 887 个应用，共有 2087 应用规则组，3 全局规则组
 
@@ -90,7 +90,7 @@ https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 ## 🥇感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&_v=409)
+![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&_v=410)
 
 ## 📈Star History
 
