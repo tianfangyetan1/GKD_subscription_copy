@@ -76,6 +76,10 @@ jobs:
           branch: ${{ github.ref }}
           tags: true
 
+      - name: 临时生成用于离线导入的订阅文件
+        run: |
+          cp dist/gkd.json5 dist/gkd_subscription(Offline)_v${{ steps.version.outputs.version }}.json5
+
       - name: Create Release
         id: create_release
         if: ${{ steps.commit.outcome == 'success' }}
@@ -86,6 +90,8 @@ jobs:
           tag_name: v${{ steps.version.outputs.version }}
           name: v${{ steps.version.outputs.version }}
           body_path: ./dist/CHANGELOG.md
+          files: |
+            dist/gkd_subscription(Offline)_v${{ steps.version.outputs.version }}.json5
           
       - name: Publish package
         env:
