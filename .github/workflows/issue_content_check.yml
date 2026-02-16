@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Add label and close issue for missing snapshots
+      - name: 缺少快照时自动标记并关闭 Issue
         if: |
           contains(github.event.issue.body, 'i.gkd.li/') == false &&
           contains(github.event.issue.body, '.zip') == false
@@ -22,7 +22,7 @@ jobs:
           body: |
             您好 ${{ github.event.issue.user.login }}，由于您没有提供快照，此issue已被自动关闭。
 
-      - name: Add label and comment for inaccessible snapshot links
+      - name: 快照链接不可访问时自动标记并提醒
         if: contains(github.event.issue.body, 'i.gkd.li/snapshot/') == true
         uses: actions-cool/issues-helper@v3
         with:
