@@ -576,7 +576,7 @@ export default defineGkdApp({
     },
     {
       key: 23,
-      name: '功能类-视频自动⏩x1.25倍速⚠️三个只能选其中一',
+      name: '功能类-视频自动⏩x1.25倍速⚠️三选一',
       desc: '依次点击 ①视频 ②更多 ③1.25倍速',
       fastQuery: true,
       actionMaximum: 1,
@@ -607,7 +607,7 @@ export default defineGkdApp({
     },
     {
       key: 24,
-      name: '功能类-视频自动⏩x1.5倍速⚠️三个只能选其中一',
+      name: '功能类-视频自动⏩x1.5倍速⚠️三选一',
       desc: '依次点击 ①视频 ②更多 ③1.5倍速',
       fastQuery: true,
       actionMaximum: 1,
@@ -638,7 +638,7 @@ export default defineGkdApp({
     },
     {
       key: 25,
-      name: '功能类-视频自动⏩x2.0倍速⚠️三个只能选其中一',
+      name: '功能类-视频自动⏩x2.0倍速⚠️三选一',
       desc: '依次点击 ①视频 ②更多 ③2.0倍速',
       fastQuery: true,
       actionMaximum: 1,
