@@ -160,10 +160,11 @@ export default defineGkdApp({
           matchTime: 10000,
           actionMaximum: 1, //防止循环展开关闭
           matches:
-            '[vid="vertical_container"] >3 FrameLayout[clickable=true][visibleToUser=true]',
+            'View[visibleToUser=true] <<2 @[clickable=true] < [vid="pager"]',
           snapshotUrls: [
             'https://i.gkd.li/i/24985920',
             'https://i.gkd.li/i/25240029',
+            'https://i.gkd.li/i/25369451',  //误触快照
           ],
         },
       ],
