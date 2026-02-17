@@ -80,5 +80,27 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '功能类-关联抖音账号登录弹窗',
+      desc: 'x掉',
+      fastQuery: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.xs.fm.live.impl.ecom.mall.auth.DouyinAuthActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true][width<66 && height<66] <<3 [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/25367551',
+        },
+        {
+          key: 1,
+          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+          matches:
+            '[text="关联抖音后解锁更多功能体验"] - ImageView[clickable=true][visibleToUser=true][width<66 && height<66]',
+          snapshotUrls: 'https://i.gkd.li/i/25367549',
+        },
+      ],
+    },
   ],
 });
