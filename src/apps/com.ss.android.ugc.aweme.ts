@@ -330,13 +330,14 @@ export default defineGkdApp({
           activityIds: '.main.MainActivity',
           matches: [
             '[desc^="已选中"] > [text="推荐"][visibleToUser=true]', // 其他页面可能会误触回到推荐页
-            '([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物" || text="游戏"][visibleToUser=true])',
+            '([text$="广告"][vid="desc"][visibleToUser=true]) || (ImageView[childCount=0] + [text="应用" || text="购物" || text="游戏" || text="咨询"][visibleToUser=true])',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/21142063',
             'https://i.gkd.li/i/21142589',
             'https://i.gkd.li/i/21142249',
             'https://i.gkd.li/i/21142871',
+            'https://i.gkd.li/i/25355868',
           ],
         },
       ],
@@ -436,6 +437,23 @@ export default defineGkdApp({
           activityIds: '.shortvideo.ui.scan.ScanNewActivity',
           matches: ['[text*="相机权限"]', '[text="以后再说"][clickable=true]'],
           snapshotUrls: 'https://i.gkd.li/i/25183382',
+        },
+      ],
+    },
+    {
+      key: 29,
+      name: '功能类-自动展开评论',
+      desc: '只展开一级评论，不点击展示更多',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.detail.ui.DetailActivity',
+          matches:
+            '[text^="展开"][text$="条回复"][visibleToUser=true][childCount=0]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25356027',
+            'https://i.gkd.li/i/25356355',
+          ],
         },
       ],
     },
