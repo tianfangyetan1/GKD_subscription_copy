@@ -98,17 +98,24 @@ export default defineGkdApp({
     {
       key: 4,
       name: '权限提示-通知权限',
-      desc: '点击顶部提醒左侧关闭按钮',
+      desc: 'x掉',
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
+          key: 1,
           activityIds: 'com.afollestad.materialdialogs.MaterialDialog',
           matches:
             '@[id="com.qidian.QDReader:id/ivClose"] + [text^="开启推送"]',
           snapshotUrls: 'https://i.gkd.li/i/12640242',
+        },
+        {
+          key: 2,
+          activityIds: '.ui.activity.MainGroupActivity',
+          matches: 'ImageView < [vid="ivUpdateNoticeClose"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/24913610',
         },
       ],
     },
