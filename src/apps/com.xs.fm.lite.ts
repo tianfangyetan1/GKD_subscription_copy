@@ -39,6 +39,14 @@ export default defineGkdApp({
             '@ImageView[clickable=true] <3 ViewGroup[childCount=3] < ViewGroup < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/24908945',
         },
+        {
+          key: 3,
+          fastQuery: true,
+          activityIds:
+            'com.bytedance.polaris.impl.view.BulletSingleContainerActivity',
+          matches: '@[text="狠心离开"] - FrameLayout > [text="立即领取"]',
+          snapshotUrls: 'https://i.gkd.li/i/25367580',
+        },
       ],
     },
     {
@@ -99,6 +107,20 @@ export default defineGkdApp({
           matches:
             '[text="关联抖音后解锁更多功能体验"] - ImageView[clickable=true][visibleToUser=true][width<66 && height<66]',
           snapshotUrls: 'https://i.gkd.li/i/25367549',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '局部广告',
+      rules: [
+        {
+          key: 0,
+          fastQuery: true,
+          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true][width<45 && height<45] +2 [text="回推荐继续听歌"]',
+          snapshotUrls: 'https://i.gkd.li/i/25367586',
         },
       ],
     },
