@@ -34,7 +34,8 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '功能类-自动选择排序方式[修改日期（从新到旧）]',
+      name: '功能类-自动选择排序方式',
+      desc: '选择[修改日期(从新到旧)]',
       rules: [
         {
           fastQuery: true,
