@@ -75,5 +75,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '权限提示-通知权限',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.oisc.UI.mainPage.OISCMainActivity',
+          matches: [
+            '[text="开启推送通知"]',
+            '[vid="close_iv"][clickable=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/25356505',
+        },
+      ],
+    },
   ],
 });
