@@ -9,15 +9,15 @@ export default defineGkdApp({
       name: '功能类-自动折叠思考过程',
       rules: [
         {
-          activityIds: 'com.deepseek.chat.MainActivity',
+          activityIds: '.MainActivity',
           actionCd: 3000,
-          matches:
-            '@[clickable=true] > [text="正在思考" || text^="已思考"] + View[desc="折叠"]',
+          matches: '@[clickable=true] > [text*="思考"] + View[desc="折叠"]',
           snapshotUrls: [
-            'https://i.gkd.li/i/23982641', // 正在思考 未折叠
-            'https://i.gkd.li/i/23982613', // 已思考 未折叠
-            'https://i.gkd.li/i/23982615', // 已思考 折叠
+            'https://i.gkd.li/i/23982641', // 正在思考 待[折叠]
+            'https://i.gkd.li/i/23982613', // 已思考 待[折叠]
+            'https://i.gkd.li/i/25364857', // 已深度思考
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/23982615', // 排除 [展开]
         },
       ],
     },
