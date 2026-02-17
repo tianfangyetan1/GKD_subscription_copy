@@ -78,10 +78,10 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: [
-            'com.qidian.QDReader.ui.activity.MainGroupActivity',
+            '.ui.activity.MainGroupActivity',
             'com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI',
-            'com.qidian.QDReader.framework.widget.dialog.judian',
-            'com.qidian.QDReader.ui.activity.BookLastPageNewActivity',
+            '.framework.widget.dialog.judian',
+            '.ui.activity.BookLastPageNewActivity',
           ],
           matches: '[vid="imgClose" || vid="btnClose"][visibleToUser=true]',
           snapshotUrls: [
@@ -120,8 +120,8 @@ export default defineGkdApp({
           key: 1,
           fastQuery: true,
           activityIds: [
-            'com.qidian.QDReader.ui.activity.QDBookDetailActivity',
-            'com.qidian.QDReader.ui.activity.MainGroupActivity',
+            '.ui.activity.QDBookDetailActivity',
+            '.ui.activity.MainGroupActivity',
           ],
           matches: '[id="com.qidian.QDReader:id/ivAdClose"]',
           snapshotUrls: [
@@ -137,7 +137,7 @@ export default defineGkdApp({
       desc: '自动点击"登录"',
       rules: [
         {
-          activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+          activityIds: '.ui.activity.QDBrowserActivity',
           matches: '[id="scanLogin"]',
           snapshotUrls: 'https://i.gkd.li/i/12903081',
         },
@@ -149,8 +149,7 @@ export default defineGkdApp({
       desc: '点击关闭',
       rules: [
         {
-          activityIds:
-            'com.qidian.QDReader.flutter.DailyReadingMainPageActivity',
+          activityIds: '.flutter.DailyReadingMainPageActivity',
           matches: 'View[desc="更多游戏"] - ImageView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/13406169',
         },
@@ -182,8 +181,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'com.qidian.QDReader.ui.activity.hongbao_square.NewHongBaoSquareActivity',
+          activityIds: '.ui.activity.hongbao_square.NewHongBaoSquareActivity',
           matches:
             '[id="com.qidian.QDReader:id/rootView"] > [id="com.qidian.QDReader:id/btnHongbaoClose"]',
           snapshotUrls: 'https://i.gkd.li/i/13918466',
@@ -196,7 +194,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+          activityIds: '.ui.activity.QDBrowserActivity',
           matches: [
             '[text^="当前处于移动网络"]',
             '@[clickable=true] >2 [text="播放"]',
