@@ -686,5 +686,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 27,
+      name: '局部广告-首页浮标广告',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.MainActivityV2',
+          matches: '[vid="animation_close"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25357810',
+        },
+      ],
+    },
   ],
 });
