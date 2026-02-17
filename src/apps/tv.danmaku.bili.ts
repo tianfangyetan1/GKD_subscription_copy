@@ -164,7 +164,7 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/24985920',
             'https://i.gkd.li/i/25240029',
-            'https://i.gkd.li/i/25369451',  //误触快照
+            'https://i.gkd.li/i/25369451', //误触快照
           ],
         },
       ],
