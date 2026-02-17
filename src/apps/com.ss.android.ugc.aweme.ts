@@ -449,11 +449,9 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.detail.ui.DetailActivity',
           matches:
-            '[text^="展开"][text$="条回复"][visibleToUser=true][childCount=0]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/25356027',
-            'https://i.gkd.li/i/25356355',
-          ],
+            '@[clickable=true] > [text^="展开"][text$="回复"]',
+          snapshotUrls: 'https://i.gkd.li/i/25356027',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/25356355', // 排除 [展开更多]
         },
       ],
     },
