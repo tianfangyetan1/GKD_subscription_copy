@@ -12,7 +12,7 @@ export default defineGkdApp({
         {
           activityIds: '.twofactor.TwoFactorActivity',
           matches:
-            '[text="无法批准" || text="登录已批准"] +n * > [text="关闭"][visibleToUser=true]',
+            '[text="无法批准" || text="登录已批准"] +n @[clickable=true] > [text="关闭"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/25366549',
             'https://i.gkd.li/i/25366553',
