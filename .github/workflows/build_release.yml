@@ -96,6 +96,8 @@ jobs:
           tag_name: v${{ steps.version.outputs.version }}
           name: v${{ steps.version.outputs.version }}
           body_path: ./dist/CHANGELOG.md
+          generate_release_notes: true
+          append_body: true
           files: |
             dist/gkd-subscription-offline-id667-v${{ steps.version.outputs.version }}.json5
           
