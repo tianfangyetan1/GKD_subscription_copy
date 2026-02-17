@@ -683,5 +683,45 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 34,
+      name: '功能类-小游戏申请发消息-拒绝',
+      desc: '①保持以上选择 ②点击[取消] ③直接拒绝',
+      fastQuery: true,
+      activityIds: [
+        'com.alipay.android.phone.messageboxstatic.extension.ProcessTransActivity',
+        'com.alipay.android.phone.mbox.biz.legacy.sbs.', // 通配
+      ],
+      rules: [
+        {
+          key: 1,
+          name: '①保持以上选择-✅',
+          matches:
+            '@CheckBox[clickable=true][checked=false] + [text$="不再询问"]',
+          snapshotUrls: 'https://i.gkd.li/i/25098582', // 未选中
+          excludeSnapshotUrls: 'https://i.gkd.li/i/25098563', // [checked=true] 已选中
+          exampleUrls: 'https://e.gkd.li/d0e5b909-7d7d-4fcb-9368-631e50d020d6',
+        },
+        {
+          key: 2,
+          name: '②取消',
+          matchDelay: 200,
+          matches:
+            '[text="发送一次以下消息"] +n * > Button[text="取消"][clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22981739',
+            'https://i.gkd.li/i/23238549',
+          ],
+        },
+        {
+          key: 3,
+          name: '③直接拒绝',
+          matchDelay: 200,
+          matches:
+            '[text="发送以下消息"] +n * > [text$="不再询问"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25199524',
+        },
+      ],
+    },
   ],
 });
