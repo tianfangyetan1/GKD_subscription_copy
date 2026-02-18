@@ -11,6 +11,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'cn.com.hzb.mobilebank.per.MainActivity',
+          matchRoot: true,
           matches:
             'Image[width<160 && height<160][childCount=0] < @View[clickable=true][childCount=1] <2 View[childCount=2] < View[index=parent.childCount.minus(1)][childCount=1] <n View[id="app"] <<3 [vid="h5_pc_container"]',
           snapshotUrls: [
