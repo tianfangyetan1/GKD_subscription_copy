@@ -25,7 +25,7 @@
 
 - **交流讨论（不要在这里反馈） -> [点击查看或开启讨论](https://github.com/Lin-arm/GKD_subscription/discussions)**
 
-- **欢迎贡献规则，提交pr前请确认您已仔细阅读 [贡献指南](./CONTRIBUTING.md) 和 [API文档](https://gkd.li/api/)，规则编写可参考 [个人收集的通用规则以及适用场景](./Selectors.md)**
+- **欢迎贡献规则，提交pr前请确认您已仔细阅读 [贡献指南](./CONTRIBUTING.md) 和 [API文档](https://gkd.li/api/)，规则编写可参考 [个人收集的通用规则以及适用场景](./docs/Selectors.md)**
 
 ## 🚀订阅
 
@@ -60,7 +60,7 @@ https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 </details><br>
 
-- 当前版本: v413
+- 当前版本: v414
 
 - 当前订阅文件已适配 889 个应用，共有 2097 应用规则组，3 全局规则组
 
@@ -90,7 +90,7 @@ https://raw.bgithub.xyz/Lin-arm/GKD_subscription/main/dist/gkd.json5
 
 ## 🥇感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&_v=413)
+![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&_v=414)
 
 ## 📈Star History
 
