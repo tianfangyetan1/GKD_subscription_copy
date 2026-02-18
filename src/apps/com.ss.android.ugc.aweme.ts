@@ -447,7 +447,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.detail.ui.DetailActivity',
+          activityIds: ['.detail.ui.DetailActivity', '.main.MainActivity'],
           matches: '@[clickable=true] > [text^="展开"][text$="回复"]',
           snapshotUrls: 'https://i.gkd.li/i/25356027',
           excludeSnapshotUrls: 'https://i.gkd.li/i/25356355', // 排除 [展开更多]
