@@ -93,13 +93,20 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
+          activityIds: [
             '.ecommerce.im.choosemedia.ECommerceIMMediaChooseActivity',
-          matches:
+            '.im.business.mediaselectpage.edit.IMEditPreviewActivity',
+            '.im.business.mediaselectpage.choose.MediaChooseActivity',
+          ],
+          matches: [
             '@ImageView[clickable=true][visibleToUser=true] + [text="原图"]',
+            '@[clickable=true] > [text="原图"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/18637952', // 未选中
             'https://i.gkd.li/i/18637948', // 已选中
+            'https://i.gkd.li/i/25401995', // 多选图片页
+            'https://i.gkd.li/i/25401998', // 单图片页
           ],
         },
       ],
