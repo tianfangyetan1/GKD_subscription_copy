@@ -31,16 +31,16 @@
 
 复制以下任意一个链接到 GKD 即可使用本订阅规则
 
-- npmmirror源（国内镜像，推荐大陆用户使用）(暂无)
+<!-- - npmmirror源（国内镜像，推荐大陆用户使用）(暂无) -->
 
 <!-- ```txt
 https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIsouler_gkd.json5
 ``` -->
 
-- jsdelivr源 (国内可用但可能不稳定,更新滞后24h)
+- CloudFlare源 (国内推荐)
 
 ```txt
-https://cdn.jsdelivr.net/gh/Lin-arm/GKD_subscription@main/dist/gkd.json5
+https://9ed4ec7e.gkd-subscription-667.pages.dev/gkd.json5
 ```
 
 - GitHub源
@@ -50,7 +50,13 @@ https://raw.githubusercontent.com/Lin-arm/GKD_subscription/main/dist/gkd.json5
 ```
 
 <details>
-<summary>☢️ 点击展开查看更多源(实验性)</summary>
+<summary>☢️ 点击展开更多备用源</summary><br>
+
+- jsdelivr源 (国内可用但可能不稳定,更新滞后24h)
+
+```txt
+https://cdn.jsdelivr.net/gh/Lin-arm/GKD_subscription@main/dist/gkd.json5
+```
 
 - bgithub源 (国内可用,同步及时30min内,但可能随时挂掉！)
 
