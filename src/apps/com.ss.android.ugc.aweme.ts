@@ -93,20 +93,22 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
+          resetMatch: 'match', // 防止从多选图进入单选图模式又给取消勾选
           activityIds: [
             '.ecommerce.im.choosemedia.ECommerceIMMediaChooseActivity',
             '.im.business.mediaselectpage.edit.IMEditPreviewActivity',
             '.im.business.mediaselectpage.choose.MediaChooseActivity',
           ],
-          matches: [
+          anyMatches: [
             '@ImageView[clickable=true][visibleToUser=true] + [text="原图"]',
-            '@[clickable=true] > [text="原图"][visibleToUser=true]',
+            '@[clickable=true] > TextView[text="原图"][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/18637952', // 未选中
             'https://i.gkd.li/i/18637948', // 已选中
             'https://i.gkd.li/i/25401995', // 多选图片页
             'https://i.gkd.li/i/25401998', // 单图片页
+            'https://i.gkd.li/i/25402432', // 单图片页_已选中
           ],
         },
       ],
