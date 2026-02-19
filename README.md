@@ -40,7 +40,7 @@ https://registry.npmmirror.com/@aisouler/gkd_subscription/latest/files/dist/AIso
 - CloudFlare源 (国内推荐)
 
 ```txt
-https://9ed4ec7e.gkd-subscription-667.pages.dev/gkd.json5
+https://gkd-subscription-667.pages.dev/gkd.json5
 ```
 
 - GitHub源
