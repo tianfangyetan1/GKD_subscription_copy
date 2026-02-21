@@ -242,5 +242,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 9,
+      name: '功能类-自动显示可能的垃圾信息',
+      desc: '有时(大部分时候)误杀太大',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.twitter.tweetdetail.TweetDetailActivity',
+          matches: 'RelativeLayout > [vid="content"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25461441',
+        },
+      ],
+    },
   ],
 });
