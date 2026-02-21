@@ -84,7 +84,7 @@ export default defineGkdApp({
     {
       key: 5,
       name: '功能类-自动翻译评论',
-      desc: '评论区自动点击[翻译成中文]',
+      desc: '评论区自动点击[翻译成/Translate to]',
       rules: [
         {
           fastQuery: true,
@@ -92,12 +92,14 @@ export default defineGkdApp({
           activityIds:
             'com.google.android.apps.youtube.app.watchwhile.MainActivity',
           matches:
-            '@Button[desc^="翻译成中文"][clickable=true][visibleToUser=true] <<n [vid="results" || vid="section_list"]',
+            '@Button[desc^="翻译成"||desc^="Translate to"][clickable=true][visibleToUser=true] <<n [vid="results" || vid="section_list"]',
           exampleUrls: 'https://e.gkd.li/e9d6eaa8-9fbf-4b16-8f0c-50239597c687',
           snapshotUrls: [
             'https://i.gkd.li/i/17068544', // 翻译前
             'https://i.gkd.li/i/17068647', // 翻译后
             'https://i.gkd.li/i/17501400',
+            'https://i.gkd.li/i/25462152', // En_translate前
+            'https://i.gkd.li/i/25462248', // En_translate后
           ],
         },
       ],
