@@ -21,26 +21,34 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
 
 有 2 种常用的打快照方式：
 
-- 悬浮窗服务: 在 APP-高级设置 中开启悬浮窗服务, 此时界面会出现一个截屏按钮, 点击这个按钮即可打快照
-- 网页端审查工具: 打开网页端审查工具-连接设备-点击快照按钮即可打快照, 网页端审查工具的使用在下面说明
+- 悬浮窗服务
+  - 在 **APP-高级设置-快照按钮** 点击弹窗授权开启**悬浮窗服务权限**后, 此时界面会出现一个**快照按钮** <img src="./images/quick-start/00_Get-snapshot-by-float-button.png" width="28" height="28" alt="通过悬浮按钮获取快照"> , 点击这个按钮即可**截取目标应用快照**
+  - 当然你也可以开启**音量快照**选项使用音量键方式来截取快照
+- Web审查工具
+  - 通过浏览器中连接手机上的 GKD 抓取快照, 具体使用方法在下面说明
+
+<details close>
+  <summary>Web端示例</summary>
+<img src="./images/quick-start/05_Get-snapshot-by-website.webp" alt="通过网站获取快照" style="zoom:67%;" />
+</details>
 
 我们以 WPS 为例子, WPS 首页文档列表有一个广告, 我们先给 WPS 打一个快照, 然后使用 网页审查工具 编写测试规则订阅 关闭这个广告
 
 打开 WPS, 然后使用上面 2 种方式之一打快照, 然后打开设置-高级设置-快照记录, 可以看到已经有了一个快照记录
 
 <details close>
-  <summary>截图: 快照记录</summary>
-
-![image](https://github.com/gkd-kit/subscription/assets/38517192/ea86d3eb-00c4-44aa-b4a8-a42c08052404)
-
+  <summary>快照记录截取示例</summary>
+<img src="./images/quick-start/01_Get-snapshot-by-volume.webp" alt="通过音量键获取快照" style="zoom:67%;" />
 </details>
 
-如果你没有电脑, 可以点击快照-分享，此时会分享一个 zip 文件, 截图和节点信息全在里面, 可以分享到某个云盘或者保存到本地, 然后在 [GKD_subscription/issues/new](https://github.com/Lin-arm/GKD_subscription/issues) 上传这个 zip 或者填写分享链接, 然后提出问题, 项目维护者会帮助你处理这个快照
+如果你没有电脑, 可以点击快照-分享，此时会分享一个 zip 文件, 截图和节点信息全在里面, 可以分享到某个云盘或者保存到本地下载（路径: /storage/emulated/0/Download/）, 然后在 [GKD_subscription/issues/new](https://github.com/Lin-arm/GKD_subscription/issues) 上传这个 zip 或者填写分享链接, 然后提出问题, 项目维护者会帮助你处理这个快照
 
 <details close>
-  <summary>截图: 分享快照</summary>
+  <summary>分享快照示例</summary>
 
-![image](https://github.com/gkd-kit/subscription/assets/38517192/8f37ce6b-4027-4679-988f-27730f60c971)
+<img src="./images/quick-start/02_Share-snapshot.webp" alt="分享快照" style="zoom:50%;" />
+
+<img src="./images/quick-start/03_Save-snapshot-to-download.webp" alt="将快照保存到download文件夹" style="zoom:50%;" />
 
 </details>
 
@@ -51,26 +59,45 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
 打开 APP-设置-高级设置-HTTP服务, 此时 HTTP 服务底部出现若干条地址，一般情况下，我们只需要关注类似 `http://192.168.1.3:8888` 这样的地址即可。
 
 > [!NOTE]
+> 
+> 地址不一定总是 `192.168.1.3` 这种形式, 具体情况取决于局域网内的网关设置。
 >
-> 地址不一定总是 `192.168.1.3` 这种形式，具体情况取决于局域网内的网关设置，如果当前局域网的网关地址被设置为 `192.168.31.1`
-> 那么你可能会看到类似 `http://192.168.31.3:8888` 的地址，请自行举一反三。
+> 如果当前局域网的网关地址被设置为 `192.168.31.1`, 那么你可能会看到类似 `http://192.168.31.3:8888` 的地址，请自行举一反三。
+
+> [!TIP]
+> 
+> 你可以在**APP-高级设置-HTTP服务**下面看到你的IP访问地址
 
 <details close>
   <summary>示例: HTTP服务</summary>
 
-![image](https://github.com/gkd-kit/subscription/assets/38517192/27aa1a3a-4096-4a0e-97ca-27a709645bba)
+![HTTP服务](./images/quick-start/06_HTTP-service.webp)
 
 </details>
 
 安装油猴脚本 <https://github.com/gkd-kit/network-extension>, 因为浏览器不允许 https 去连接 http 域名, 可以通过油猴脚本绕过这个限制
 
-浏览器打开 <https://i.gkd.li/>, 然后在这个网站启用油猴脚本的注入功能, 然后点击右上角 `连接设备` 图标去连接设备
+在浏览器访问刚才看到的 HTTP 服务地址 `http://192.168.2.3:8888`
 
-在设置页面左上角输入上述地址 `http://192.168.1.3:8888`, 然后点击 `刷新连接`, 即可成功连接设备
+在这个网站启用油猴脚本的注入功能
 
-![image](https://github.com/gkd-kit/subscription/assets/38517192/d3a956ca-f54b-4d9d-a2ae-3792b5a18aa4)
+![注入油猴脚本](./images/quick-start/14_Injecting-Tampermonkey-script.png)
 
-可以看到第一个项目就是我们刚刚在 WPS 打的快照, 点击这个项目右侧的 `查看` 按钮
+对弹出的授权点击 `临时允许` 或 `总是允许`
+
+![授予权限](images/quick-start/15_Grant-premission.png)
+
+> [!TIP]
+> 
+> 不使用 `允许一次` 是因为接下来每次打开快照都会弹出授权请求
+>
+> 不使用 `总是允许全部域名` 是因为权限太高，有风险
+>
+> 每次连接的地址可能会更换，使用新地址需要重新授权
+
+然后点击 `刷新连接` , 可以看到第一个条就是我们刚刚在 WPS 打的快照, 点击这个项目右侧的 `查看` 按钮
+
+![连接到设备](./images/quick-start/07_Connect-to-device.png)
 
 我们就能在电脑上审查 <https://i.gkd.li/i/12505286> 这个快照
 
@@ -90,9 +117,9 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
 
 接下来测试这个选择器能否选中这个图标按钮, 点击审查工具的 选择器查询, 输入刚刚这个规则, 然后点击查询。
 
-这里点击右侧的 `分享`-`复制链接-快照` 才能获取快照链接（以/i/开头）
+![编写一个选择器](./images/quick-start/08_Write-a-selector.webp)
 
-![image](https://github.com/gkd-kit/subscription/assets/38517192/3aea04fd-da91-4f43-a79e-e40fdad4a5d4)
+这里点击右侧的 `分享`-`复制链接-快照` 才能获取快照链接（以/i/开头）
 
 很明显这个选择器是有效的, 那么我们去真机测试这个选择器到底行 8 行
 
@@ -152,9 +179,9 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
 }
 ```
 
-此时回到APP首页-订阅, 会发现多了一条订阅
+此时回到APP首页-订阅, 会发现多了一条**内存订阅**
 
-![image](https://github.com/gkd-kit/subscription/assets/38517192/89413281-4ad3-4c9c-aee5-97eb9da4bcd0)
+![内存订阅](./images/quick-start/04_Memory-subscribe.webp)
 
 接下来把 WPS 清除全部数据后重新打开, 可以看到规则已经生效, 广告已经被自动关闭
 
@@ -164,6 +191,8 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
 >
 > 当你关闭 HTTP 服务器时, 默认情况下，这个内存订阅也会被清除，所以，请不要将内存订阅当作本地订阅使用。
 > 如果你出于某种目的确实需要保留内存订阅中的内容，请在 APP-设置-高级设置中，关闭 `清除订阅` 功能。
+> 
+> ![保留内存订阅](./images/quick-start/09_Keep-memory-subscribe.webp)
 
 ## 提交代码
 
@@ -218,16 +247,52 @@ export default defineGkdApp({
 });
 ```
 
-注意每个规则一定要添加快照链接, 否则后期维护根本不知道这个规则到底点的是啥
+> [!TIP]
+> 
+> 可以使用 [GKD网页审查工具增强脚本](https://github.com/adproqwq/MakeGKDInspectBetter)快速高效复制出TS代码
+
+<details close>
+  <summary>示例: 快速复制规则示例</summary>
+
+<video src="./images/quick-start/11_Fast-copy-rules.mp4" controls autoplay loop muted width="100%"></video> <!-- 兼容本地正常显示 -->
+
+https://github.com/user-attachments/assets/4778654c-aa82-4ac7-8aa1-bd3a37040d3f
+
+</details>
+
+> [!IMPORTANT]
+> 
+> 每个规则一定要添加**快照链接**, 否则**后期维护根本不知道**这个规则到底点的是啥
+
+<details close>
+  <summary>示例: 获取快照链接示例</summary>
+
+<video src="./images/quick-start/10_Copy-URL.mp4" controls autoplay loop muted width="100%"></video> <!-- 兼容本地正常显示 -->
+
+https://github.com/user-attachments/assets/2e90caf2-960c-4f58-898c-b15461decc5b
+
+</details>
 
 然后运行校验命令 `npm run check`, 它会检测你的规则是否书写正确, 也会检测每个选择器语法是否正确
+
+- 检查通过
+
+![检查通过](./images/quick-start/12_Check-pass.webp) 
+
+- 检查不通过**红色波浪线指明具体错误**（示例中第19行代码''键''不对 少了个s）
+
+![检查失败](./images/quick-start/13_Check-fail.webp)
 
 然后提交这个文件发起 pr 即可
 
 > [!NOTE]
->
+> 
 > 通常不建议直接在 `main` 分支上修改内容进行提交，你应该针对每个要提交规则的 APP 单独创建新的分支，然后在每个 APP 的分支上分别发起各自的 pr
 > 也就是说，如果你想提交 N 个 APP, 你应该分别创建 N 个分支，发起 N 个 pr
+
+> [!TIP]
+> 
+> 有一些高级技巧，例如 [快速查询](./fast-query.md)，在本文不展开讲解。你可以阅读 [CONTRIBUTING.md](../CONTRIBUTING.md) 中提到的其他文档或网站了解它们。
 
 ## 检测修复代码
 
