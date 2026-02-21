@@ -17,7 +17,7 @@ apps.forEach((appConfig) => {
 
 export default defineGkdSubscription({
   id: 667,
-  name: 'GKD第三方订阅(Fork版)',
+  name: 'id667的GKD订阅🚀',
   version: 1,
   author: '👻',
   checkUpdateUrl: './gkd.version.json5',
