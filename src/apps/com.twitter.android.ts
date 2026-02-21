@@ -204,13 +204,16 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.twitter.tweetdetail.TweetDetailActivity',
           matches:
-            '[vid="translation_link"][clickable=true][visibleToUser=true]',
-          exampleUrls:
+            '[vid="translation_link"||vid="grok_translation_link"][clickable=true][visibleToUser=true]',
+          exampleUrls: [
+            'https://e.gkd.li/ced46989-9c6a-4626-b027-7953e0fdc2c6',
             'https://m.gkd.li/57941037/40ece44f-883f-429a-aa0c-17dac15a50e4',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/14189817',
             'https://i.gkd.li/i/14615911',
             'https://i.gkd.li/i/25461468',
+            'https://i.gkd.li/i/25461607', // Grok translate
           ],
         },
       ],
