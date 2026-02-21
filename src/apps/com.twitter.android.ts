@@ -60,7 +60,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '分段广告-帖子详情页、搜索页信息流广告',
-      desc: '点击右上角关闭,点击屏蔽用户,确认屏蔽.点击[我不喜欢]会返回主页,因此点击[屏蔽]',
+      desc: '右上角关闭-屏蔽用户-确认屏蔽.点击[我不喜欢]会返回主页,因此点击[屏蔽]',
       fastQuery: true,
       activityIds: [
         'com.twitter.tweetdetail.TweetDetailActivity',
@@ -97,28 +97,31 @@ export default defineGkdApp({
         },
         {
           preKeys: [0, 1, 2],
-          key: 10,
-          name: '点击屏蔽',
+          key: 3,
+          name: '点击屏蔽/隐藏,如果机会全用完需要取消遍再屏蔽',
           matches:
-            '@ViewGroup > [id="com.twitter.android:id/action_sheet_item_title"][text^="屏蔽"||text^="屏蔽"||text^="Block"||text^="隐藏 @"||text^="Hide @"]',
+            '@ViewGroup > [id="com.twitter.android:id/action_sheet_item_title"][text^="屏蔽"||text^="Block"||text^="隐藏 @"||text^="Mute @"||text^="Unblock @"||text^="Unmute @"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12828815',
             'https://i.gkd.li/i/12847600',
             'https://i.gkd.li/i/12904602',
             'https://i.gkd.li/i/13680783',
-            'https://i.gkd.li/i/25089665',
+            'https://i.gkd.li/i/25089665', // 屏蔽已用
+            'https://i.gkd.li/i/25461007', // 隐藏已用
+            'https://i.gkd.li/i/25461077', // En-Mute
+            'https://i.gkd.li/i/25461050', // En-Unmute
           ],
         },
         {
-          preKeys: [10],
-          key: 11,
+          preKeys: [3],
           matches:
-            '[text="取消"||text^="Cancel"] + [text="屏蔽"||text^="Block"||text="是的，我确定"||text^="Yes"]',
+            '[text="取消"||text^="Cancel"] + [text="屏蔽"||text^="Block"||text="是的，我确定"||text^="Yes"||text^="屏蔽"||text^="Mute"||text^="Unmute"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12828832',
             'https://i.gkd.li/i/12904601',
             'https://i.gkd.li/i/13680798',
             'https://i.gkd.li/i/25089666',
+            'https://i.gkd.li/i/25461062', // En-Unmute
           ],
         },
       ],
