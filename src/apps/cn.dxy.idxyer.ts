@@ -288,5 +288,28 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 16,
+      name: '功能类-自动解除医学领域图片内容',
+      desc: '查看-返回操作',
+      fastQuery: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: '.biz.post.PostDetailActivity',
+          action: 'clickCenter',
+          matches:
+            'Button[visibleToUser=true] -6 View > @[desc^="涉及医学专业领域的"][clickable=true][visibleToUser=true] <<n View[childCount=9] <<n FrameLayout - [vid="post_detail_title_fl"]',
+          snapshotUrls: 'https://i.gkd.li/i/25459917', // 有时加载不全，无法捕获到‘查看’控件
+        },
+        {
+          preKeys: [0],
+          activityIds: '.common.WebViewActivity',
+          matches: '[vid="toolbar"]',
+          action: 'back',
+          snapshotUrls: 'https://i.gkd.li/i/25459975',
+        },
+      ],
+    },
   ],
 });
