@@ -150,8 +150,11 @@ export default defineGkdApp({
           activityIds:
             'com.google.android.apps.youtube.app.watchwhile.MainActivity',
           matches:
-            '@ImageView[clickable=true][width<100 && height<100] <<n [vid="panel_header"]',
-          snapshotUrls: 'https://i.gkd.li/i/23787178',
+            '[desc="更多选项"] + @ImageView[clickable=true][width<100 && height<100] <<n [vid="panel_header"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23787178',
+            'https://i.gkd.li/i/25461943', // 误触(已修复)
+          ],
         },
       ],
     },
