@@ -2,7 +2,7 @@ import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'com.google.android.youtube',
-  name: 'youtube',
+  name: 'YouTube',
   groups: [
     {
       key: 0,
@@ -104,16 +104,20 @@ export default defineGkdApp({
     },
     {
       key: 6,
-      name: '其他-关闭播放器辅助功能弹窗',
-      desc: '点击[Dismiss]',
+      name: '其他-关闭播放器无障碍辅助弹窗',
+      desc: '点击[Dismiss/关闭]',
       rules: [
         {
           fastQuery: true,
           activityIds:
             'com.google.android.apps.youtube.app.watchwhile.MainActivity',
-          matches: '[text="Dismiss"][visibleToUser=true]',
+          matches:
+            '[vid="mealbar_action_button"] - [vid="mealbar_dismiss_button"][clickable=true][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/aa8f2617-fd6d-43a8-951d-1bd6efc504d3',
-          snapshotUrls: 'https://i.gkd.li/i/19930694',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19930694',
+            'https://i.gkd.li/i/25461814',
+          ],
         },
       ],
     },
@@ -170,8 +174,12 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds:
             'com.google.android.apps.youtube.app.watchwhile.MainActivity',
-          matches: '@[clickable=true] > [text="关闭"]',
-          snapshotUrls: 'https://i.gkd.li/i/23772979',
+          matches:
+            '@[clickable=true] >(1,2) [vid="list_item_text"][text="关闭"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23772979',
+            'https://i.gkd.li/i/25461885',
+          ],
         },
       ],
     },
