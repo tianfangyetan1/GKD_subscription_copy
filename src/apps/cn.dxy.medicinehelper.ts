@@ -10,12 +10,18 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.activity.MainComposeActivity',
+          activityIds: [
+            '.activity.MainComposeActivity',
+            'cn.dxy.drugscomm.business.medadviser.detail.MedAdviserDetailComposeActivity',
+          ],
           matches: [
             '[text*="新版本" || text$="更新"][visibleToUser=true]',
             '[vid="iv_close"][clickable=true]',
           ],
-          snapshotUrls: 'https://i.gkd.li/i/25292995',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25292995',
+            'https://i.gkd.li/i/25459354',
+          ],
         },
       ],
     },
@@ -98,12 +104,33 @@ export default defineGkdApp({
       name: '局部广告',
       rules: [
         {
+          key: 0,
           fastQuery: true,
           activityIds:
             'cn.dxy.drugscomm.business.ebm.EbmContentComposeActivity',
           matches:
             '@ImageView[clickable=true] <2 View[index=parent.childCount.minus(1)] <n View <<2 ComposeView < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/25247624',
+        },
+        {
+          key: 1,
+          fastQuery: true,
+          activityIds:
+            'cn.dxy.drugscomm.business.guide.simple.GuideSimpleComposeActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true][width<102 && height<102] -3 ScrollView <<n [id="android:id/content"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25460814',
+            'https://i.gkd.li/i/25460845',
+          ],
+        },
+        {
+          fastQuery: true,
+          activityIds:
+            '.user.biz.subscribe.list.SubscriptionCenterListComposeActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true] - [text="去添加"] <<n [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/25460862',
         },
       ],
     },
