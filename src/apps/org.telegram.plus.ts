@@ -19,5 +19,23 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能类-更多-只保存单个媒体',
+      desc: '弹窗-点击 [这张图片]或[这个媒体]',
+      rules: [
+        {
+          fastQuery: true,
+          matches:
+            '[getChild(0).text^="保存"] +2 * > [text="这张图片" || text="这个媒体"][clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22945715', //图片
+            'https://i.gkd.li/i/22945853', //视频
+          ],
+          exampleUrls: 'https://e.gkd.li/9225eb21-84e6-4baa-88c5-f5dc2230c111',
+          activityIds: 'org.telegram.ui.LaunchActivity',
+        },
+      ],
+    },
   ],
 });
