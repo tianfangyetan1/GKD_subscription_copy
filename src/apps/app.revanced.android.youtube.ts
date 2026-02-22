@@ -2,7 +2,7 @@ import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'app.revanced.android.youtube',
-  name: 'YouTube',
+  name: 'YouTube ReVanced',
   groups: [
     {
       key: 1,
@@ -17,6 +17,26 @@ export default defineGkdApp({
             '@Button[desc="Close"][clickable=true][visibleToUser=true][width<150 && height<150] <<n [vid="custom"]',
           exampleUrls: 'https://e.gkd.li/3c45eae4-383d-489b-ae58-f58d70ea4478',
           snapshotUrls: 'https://i.gkd.li/i/20856330',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '功能类-自动翻译评论',
+      desc: '评论区自动点击[翻译成/Translate to]',
+      rules: [
+        {
+          fastQuery: true,
+          actionCd: 500,
+          activityIds:
+            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
+          matches:
+            '@Button[desc^="翻译成"||desc^="Translate to"][clickable=true][visibleToUser=true] <<n [vid="results" || vid="section_list"]',
+          exampleUrls: 'https://e.gkd.li/f43ebb75-f0d2-4447-9681-2937f72cf3f7',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25462645', // En_translate前
+            'https://i.gkd.li/i/25462649', // En_translate后
+          ],
         },
       ],
     },
